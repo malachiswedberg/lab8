@@ -44,5 +44,27 @@ public class GameTests {
 				add(Location.BILLIARD_ROOM);
 			}
 		}, bg.getPlayersLocations());
+
+		Assert.assertEquals("Incorrect getPlayersPieces Method", new LinkedHashSet<GamePiece>() {
+			{
+				add(GamePiece.BLUE_BOOT);
+				add(GamePiece.BLUE_RACER);
+				add(GamePiece.GREEN_BOOT);
+			}
+		}, bg.getPlayerPieces());
+		
+		String[] a = {"josh", "joe"};
+		Location[] b = {Location.CONSERVATORY, Location.CONSERVATORY};
+		bg.movePlayer("jimmy", Location.BILLIARD_ROOM);
+		bg.moveTwoPlayers(a, b);
+		
+		Assert.assertEquals("Incorrect movePlayer method", Location.BILLIARD_ROOM, bg.getPlayersLocation("jimmy"));
+		Assert.assertEquals("Incorrect moveTwoPlayers method, or getPlayersAtLocation method", new ArrayList<String>(){
+			{
+				add("joe");
+				add("josh");
+			}
+		}, bg.getPlayersAtLocation(Location.CONSERVATORY));
 	}
+	
 }
