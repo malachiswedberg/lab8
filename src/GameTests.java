@@ -66,5 +66,12 @@ public class GameTests {
 			}
 		}, bg.getPlayersAtLocation(Location.CONSERVATORY));
 	}
+
+	@Test
+	public void GamePieceTest() {
+		Assert.assertEquals(Color.BLUE, GamePiece.BLUE_BOOT.getColor());
+		Assert.assertEquals(Shape.BOOT, GamePiece.BLUE_BOOT.getShape());
+		Assert.assertEquals("RED_RACER: a RED RACECAR with priority 0", GamePiece.RED_RACER.toString());
+	}
 	
 }
