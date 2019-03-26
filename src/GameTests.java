@@ -73,5 +73,11 @@ public class GameTests {
 		Assert.assertEquals(Shape.BOOT, GamePiece.BLUE_BOOT.getShape());
 		Assert.assertEquals("RED_RACER: a RED RACECAR with priority 0", GamePiece.RED_RACER.toString());
 	}
-	
+
+	@Test
+	public void colorTest() {
+		Assert.assertEquals(255, Color.RED.getR());
+		Assert.assertEquals(0, Color.RED.getG());
+		Assert.assertEquals(0, Color.RED.getB());
+	}
 }
