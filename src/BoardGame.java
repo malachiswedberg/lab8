@@ -130,7 +130,7 @@ public class BoardGame {
 		return result;
 	}
 	
-	public Set<GamePiece> getPlayerPeices() {
+	public Set<GamePiece> getPlayerPieces() {
 		Set<String> set = playerPieces.keySet();
 		Iterator<String> iter = set.iterator();
 		

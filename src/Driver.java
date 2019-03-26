@@ -18,6 +18,7 @@ public class Driver {
 		bg.moveTwoPlayers(new String[] {"Professor Plumb", "Jimmy"}, new Location[] {Location.DINING_ROOM, Location.HALL});
 		
 		System.out.println(bg.getPlayersLocations());
-		System.out.println(bg.getPlayerPeices());
+		System.out.println(bg.getPlayerPieces());
+		System.out.println(bg.getPlayers());
 	}
 }
